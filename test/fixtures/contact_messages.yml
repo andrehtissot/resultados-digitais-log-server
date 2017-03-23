@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+users_first:
+  contact_user: 1
+  name: User
+  message: User's first message
+
+users_second: 1
+  contact_user:
+  name: User
+  message: User's second message
+
+admins:
+  contact_user: 2
+  name: Admin
+  message: Admin's message

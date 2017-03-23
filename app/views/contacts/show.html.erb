@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @contact.email %>
+</p>
+
+<p>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Name</th>
+        <th>Message</th>
+        <th>Visited Pages</th>
+      </tr>
+    </thead>
+    <% @contact.contact_messages.each do |message| %>
+      <tbody>
+        <tr>
+          <td><%= message.created_at.strftime('%d/%m/%Y') rescue '' %></td>
+          <td><%= message.name %></td>
+          <td><%= message.message %></td>
+          <td>
+            <% visits = message.page_visits %>
+            <% if visits.count == 0 %>
+              --
+            <% else %>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Page</th>
+                    <th>URL</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% visits.each do |visit| %>
+                    <tr>
+                      <td><%= visit.time.strftime('%d/%m/%Y %H:%M:%S') rescue '' %></td>
+                      <td><%= visit.page_name %></td>
+                      <td><%= visit.url %></td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            <% end %>
+          </td>
+        </tr>
+      </tbody>
+    <% end %>
+  </table>
+</p>
+
+<%= link_to 'Back', contacts_path %>

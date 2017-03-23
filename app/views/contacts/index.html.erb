@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Contacts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contacts.each do |contact_user| %>
+      <tr>
+        <td><%= contact_user.contact_messages.last.name rescue '' %></td>
+        <td><%= contact_user.email %></td>
+        <td><%= link_to 'Show', contact_path(contact_user) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
