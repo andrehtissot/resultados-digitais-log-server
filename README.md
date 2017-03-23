@@ -1,0 +1,1 @@
+# resultados-digitais-log-server
