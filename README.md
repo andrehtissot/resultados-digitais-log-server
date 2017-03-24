@@ -10,15 +10,16 @@ Works fine both locally and on heroku.
 * Modern browser. Currently tested on Firefox 52;
 * MongoDB 3.4;
 * RubyOnRails 5.0;
-* NodeJS.
+* NodeJS 7.7.
 
 ### Install
 #### For Ubuntu 16.10 x64
-##### MongoDB
+###### MongoDB
 ```bash
 sudo apt install mongodb-server
-'''
-##### NPM
+```
+
+###### NPM
 ```bash
 if ! [ -d /opt/ ]; then sudo mkdir /opt/ ; fi;
 sudo chmod 777 /opt/
@@ -34,14 +35,16 @@ sudo make install
 rm -f /opt/node.tgz
 echo -e "\nexport PATH=\"\$PATH:/opt/node/bin\" # NodeJS" >> ~/.bashrc
 source ~/.bashrc
-'''
-##### Rails (RVM)
+```
+
+###### Rails (RVM)
 ```bash
 sudo apt install curl
 \curl -sSL https://get.rvm.io | bash -s stable --rails
 echo -e "\nsource /home/tester/.rvm/scripts/rvm" # Ruby" >> ~/.bashrc
-'''
-##### Application
+```
+
+###### Application
 ```bash
 sudo npm install -g uglify-js@latest
 sudo apt install git-core uglifier
@@ -49,7 +52,7 @@ git clone https://github.com/andrehtissot/resultados-digitais-log-server.git
 cd resultados-digitais-log-server
 bundle install
 rails s
-'''
+```
 
 ### Behavior
 There are two controllers: contacts and logs, both are called from the example web page.
