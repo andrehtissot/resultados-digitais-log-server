@@ -47,7 +47,7 @@ echo -e "\nsource /home/tester/.rvm/scripts/rvm" # Ruby" >> ~/.bashrc
 ###### Application
 ```bash
 sudo npm install -g uglify-js@latest
-sudo apt install git-core uglifier
+sudo apt install git-core
 git clone https://github.com/andrehtissot/resultados-digitais-log-server.git
 cd resultados-digitais-log-server
 bundle install
