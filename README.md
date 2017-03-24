@@ -41,7 +41,7 @@ source ~/.bashrc
 ```bash
 sudo apt install curl
 \curl -sSL https://get.rvm.io | bash -s stable --rails
-echo -e "\nsource /home/tester/.rvm/scripts/rvm" # Ruby" >> ~/.bashrc
+echo -e "\nsource /home/tester/.rvm/scripts/rvm # Ruby" >> ~/.bashrc
 ```
 
 ###### Application
